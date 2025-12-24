@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Professional Photographer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo"><h2>Photographer</h2></a>
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="about.html" class="navbar-link">About</a>
+                <a href="portfolio.html" class="navbar-link">Portfolio</a>
+                <a href="services.html" class="navbar-link">Services</a>
+                <a href="testimonials.html" class="navbar-link">Testimonials</a>
+                <a href="contact.html" class="navbar-link">Contact</a>
+                <a href="login.html" class="navbar-link" id="auth-link">Login</a>
+            </div>
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
+                <button class="navbar-toggle" id="navbar-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="section">
+        <div class="container">
+            <h1 class="section-title">Our Services</h1>
+            <div class="features-grid" id="services-grid">
+                <p class="loading">Loading services...</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/auth.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/navbar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', loadServices);
+
+        async function loadServices() {
+            const grid = document.getElementById('services-grid');
+            try {
+                const response = await fetch('/api/services');
+                const services = await response.json();
+
+                if (services.length > 0) {
+                    grid.innerHTML = services.map(service => `
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-camera fa-3x"></i></div>
+                            <h3>${service.name}</h3>
+                            <p>${service.description}</p>
+                            <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-color); margin-top: 1rem;">
+                                ${service.price}
+                            </p>
+                            ${service.duration ? `<p><i class="fas fa-clock"></i> ${service.duration}</p>` : ''}
+                        </div>
+                    `).join('');
+                } else {
+                    grid.innerHTML = '<p class="text-center">No services available yet.</p>';
+                }
+            } catch (error) {
+                grid.innerHTML = '<p class="error">Failed to load services.</p>';
+            }
+        }
+    </script>
+</body>
+</html>

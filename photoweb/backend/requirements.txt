@@ -1,0 +1,8 @@
+# Python Flask Photographer Portfolio Backend - SQLite Version
+
+Flask==3.0.0
+Flask-SQLAlchemy==3.1.1
+PyJWT==2.8.0
+Flask-CORS==4.0.0
+Werkzeug==3.0.1
+email-validator==2.1.0

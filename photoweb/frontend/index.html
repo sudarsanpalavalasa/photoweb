@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional photographer portfolio showcasing stunning photography work">
+    <title>Professional Photographer Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <h2>Photographer</h2>
+            </a>
+
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="about.html" class="navbar-link">About</a>
+                <a href="portfolio.html" class="navbar-link">Portfolio</a>
+                <a href="services.html" class="navbar-link">Services</a>
+                <a href="testimonials.html" class="navbar-link">Testimonials</a>
+                <a href="contact.html" class="navbar-link">Contact</a>
+                <a href="login.html" class="navbar-link" id="auth-link">Login</a>
+            </div>
+
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Capturing Your Precious Moments</h1>
+            <p class="hero-subtitle">Professional Photography for Every Occasion</p>
+            <div class="hero-buttons">
+                <a href="portfolio.html" class="btn btn-blue">View Portfolio</a>
+                <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera fa-3x"></i>
+                    </div>
+                    <h3>Professional Quality</h3>
+                    <p>High-end equipment and expertise to capture stunning images</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award fa-3x"></i>
+                    </div>
+                    <h3>Award Winning</h3>
+                    <p>Recognized for excellence in photography and creativity</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users fa-3x"></i>
+                    </div>
+                    <h3>Client Focused</h3>
+                    <p>Personalized service tailored to your unique needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section class="featured-work section">
+        <div class="container">
+            <h2 class="section-title">Featured Work</h2>
+            <div class="portfolio-grid" id="featured-portfolio">
+                <p class="loading">Loading portfolio...</p>
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="portfolio.html" class="btn">View All Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Capture Your Story?</h2>
+            <p>Let's create beautiful memories together</p>
+            <a href="contact.html" class="btn btn-blue">Book a Session</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Photographer</h3>
+                    <p>Capturing moments that last forever. Professional photography services for all occasions.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="about.html">About</a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="services.html">Services</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> [email protected]</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Professional Photographer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
